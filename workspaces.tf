@@ -18,7 +18,7 @@ resource "tfe_workspace" "workspace" {
   terraform_version = each.value.terraform_version
   lifecycle {
     ignore_changes = [
-      remote_state_consumer_ids, trigger_prefixes
+      remote_state_consumer_ids, trigger_prefixes, working_directory, vcs_repo
     ]
   }
 }
